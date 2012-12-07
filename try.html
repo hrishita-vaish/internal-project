@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>trial</title>
+<script>
+function changeImage()
+{
+element = document.getElementById("iphone");
+element1 = document.getElementById("change");
+if(element.src.match("specs_size"))
+	{
+		element.src="360211-apple-iphone-5-at-t.jpg";
+		element1.innerHTML="iphone in white color. Click the image to see the iphone in black again";
+		
+	}
+else
+	{
+		element.src = "specs_size.jpg";
+		element1.innerHTML="click the image to see the iphone in white color";
+		
+	}
+}
+</script>
+</head>
+<body>
+<img id="iphone" src="C:\Users\hrishita vaish\Desktop\specs_size.jpg" 
+height="140" width="120" onclick="changeImage()">
+<p id="change">click the image to see the iphone in white color</p>
+</body>
+</html>
