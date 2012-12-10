@@ -1,0 +1,21 @@
+<!DOCTYPE>
+<html>
+<head><title>Reversal of string</title>
+<script>
+function str_reverse()
+{
+	var s = document.getElementById("text1").value;
+	var s1 = s.split("").reverse().join("");
+	document.getElementById("text2").value = s1;
+	//document.getElementById("text1").value = s1; //this is not working, please let me know how can I input value to the same textarea.
+}
+</script>
+</head>
+<body>
+<textarea id = "text1" rows="5" cols="10"></textarea>
+<br>
+<button onclick="str_reverse()">reverse the string</button>
+<br>
+<textarea id = "text2" rows="5" cols="10"></textarea>
+</body>
+</html>
