@@ -1,0 +1,35 @@
+<h1>Listing userdetails</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Emp</th>
+    <th>Date of birth</th>
+    <th>Gender</th>
+    <th>Address</th>
+    <th>Hobbies</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @userdetails.each do |userdetail| %>
+  <tr>
+    <td><%= userdetail.First_Name %></td>
+    <td><%= userdetail.Last_Name %></td>
+    <td><%= userdetail.Emp_id %></td>
+    <td><%= userdetail.Date_of_Birth %></td>
+    <td><%= userdetail.Gender %></td>
+    <td><%= userdetail.Address %></td>
+    <td><%= userdetail.Hobbies %></td>
+    <td><%= link_to 'Show', userdetail %></td>
+    <td><%= link_to 'Edit', edit_userdetail_path(userdetail) %></td>
+    <td><%= link_to 'Destroy', userdetail, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Userdetail', new_userdetail_path %>
